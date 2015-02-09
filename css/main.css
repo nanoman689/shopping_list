@@ -22,3 +22,36 @@ body {
 	padding: 20px;
 	font-size: 45px;
 }
+
+/* checkbox */
+
+
+.checkboxone {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	border-radius: 4px;
+	background: #fafafa;
+	border: 1px solid #cacece;
+}
+
+/* input box */
+
+.newitem {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1em;
+	color:#000;
+	background-color:#ddd;
+	width: 500px;
+}
+
+/* add and done button */
+
+.addbutton,
+.donebutton {
+	font-family: 'Fira Sans', sans-serif;
+	cursor: pointer;
+	font-size: 1em;
+	color:#000;
+	background-color:#ddd;
+}
