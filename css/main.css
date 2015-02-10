@@ -9,6 +9,7 @@ body {
 }
 
 .main {
+	text-align: center;
 	background-color: white;
 	margin-top: 110px;
 	padding-left: 100px;
@@ -24,16 +25,6 @@ body {
 }
 
 /* checkbox */
-
-
-.checkboxone {
-	cursor: pointer;
-	width: 20px;
-	height: 20px;
-	border-radius: 4px;
-	background: #fafafa;
-	border: 1px solid #cacece;
-}
 
 /* input box */
 
