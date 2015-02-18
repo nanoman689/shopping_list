@@ -10,13 +10,20 @@
 	<script src="js/app.js"></script>
 </head>
 <body>
-	<div class="main">
+	<div class="title">
 		<h1>Shopping List App</h1>
-		<input type="checkbox" value="none" id="cb1" name="check">
-		<label for="checkbox"></label>
-		<input class="newitem" value="new">
-		<button class ="addbutton">add</button>
-		<button class ="donebutton">done</button>
+		<h2>Click add to add the item to the list</h2>
+		<h2>Then click to mark it completed</h2>
+	</div>	
+	<div class="main">
+		<input type="newitem" id="newItem" class="textBox" value="Add something to the list">
+		<button id="addbutton" class ="addbutton">add</button>
+		<ul class="items">
+			<!-- <li>Item 1</li>
+			<li>Item 2</li> -->
+		</ul>	
+	</div>
+	<div id="holder">
 
 	</div>
 
