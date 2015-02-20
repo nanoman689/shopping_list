@@ -4,53 +4,29 @@
 $(document).ready(function() {
 	$('#addbutton').click(function () {
 		alert("hi there addbutton");
-		var text=$('#newItem').val();
-		if(text.length){
-			$('<li />', {html: text}).appendTo('ul.items');
-		}
+
+		var text = $('#newItem').val();
+		console.log("Adding the element: " + text);
+		var li = $('<li>', {class:"item", html:text});
+		var btn = $("<button>", {class:"btn", html:"x"});
+		var check = $("<input>", {class:"done", type:"checkbox"});
+		
+		li.append(btn);
+		li.prepend(check);
+
+		$(".items").append(li);
+
+		$("#newItem").val("");
+
 	});	
 
-	/* click to mark done with line-through */
-
-	$('ul').on('click', 'li', function() {
-		alert("click ul item");
-		$(this).css('textDecoration','line-through');
-		$(this).toggleClass('done');
+	$('.items').on('click', 'button', function() {
+		console.log("remove this element");
+		$(this).parent().remove();
 	})
 
-	/* Remove the item by double clicking */
-
-	$('.remove').on('dblclick', 'li', function () {
-		alert("Double Click!");
-		if ($('li').hasClass('done')) {
-			$(this).remove();		
-		}
+	$('.items').on('click', 'li', function (){
+		console.log("Changes the checkbox: "+ $(this).checkbox);
+		$(this).parent().toggleClass("done");
 	})
-
-
-
-
 });
-	/*
-
-	$(".main").find(".addbutton").click(function () {
-		alert("hi there addbutton");
-		(".items").append(<li></li>);
-	});
-
-	$(".main").find(".donebutton").click(function () {
-		alert("hi there donebutton");
-		$(".main2").remove();
-        return false;
-	});
-	*/
-
-/* Code to make checked done items have a strikethough
-
-$('#main').on('change','input[type=checkbox]',function(){
-    var input = $(this).parent().find('input[type=text]');
-    $(input).css('textDecoration','line-through');
-});
-
-*/
-
