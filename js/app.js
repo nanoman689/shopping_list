@@ -3,13 +3,13 @@
 
 $(document).ready(function() {
 	$('#addbutton').click(function () {
-		alert("hi there addbutton");
+		/* alert("hi there addbutton"); */
 
 		var text = $('#newItem').val();
 		console.log("Adding the element: " + text);
 		var li = $('<li>', {class:"item", html:text});
 		var btn = $("<button>", {class:"btn", html:"x"});
-		var check = $("<input>", {class:"done", type:"checkbox"});
+		var check = $("<input>", {class:"new", type:"checkbox"});
 		
 		li.append(btn);
 		li.prepend(check);

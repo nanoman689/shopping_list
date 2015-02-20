@@ -69,6 +69,11 @@ input[type=newItem] {
 
 }
 
+.main .items input[type="button"] {
+	background-color: red;
+}
+
+
 .done {
 	text-decoration: line-through;
 }
