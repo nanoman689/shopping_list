@@ -9,7 +9,7 @@ $(document).ready(function() {
 		console.log("Adding the element: " + text);
 		var li = $('<li>', {class:"item", html:text});
 		var btn = $("<button>", {class:"btn", html:"x"});
-		var check = $("<input>", {class:"new", type:"checkbox"});
+		var check = $("<input>", {class:"check", type:"checkbox"});
 		
 		li.append(btn);
 		li.prepend(check);
@@ -25,8 +25,8 @@ $(document).ready(function() {
 		$(this).parent().remove();
 	})
 
-	$('.items').on('click', 'li', function (){
+	$('.items').on('change', ".check", function(){
 		console.log("Changes the checkbox: "+ $(this).checkbox);
 		$(this).parent().toggleClass("done");
-	})
+	});
 });
